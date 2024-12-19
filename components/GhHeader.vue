@@ -1,5 +1,5 @@
 <template>
-  <gh-container class="sticky top-0 left-0 w-full h-[84px] bg-white dark:bg-black border-b border-solid dark:border-gray-700">
+  <gh-container class="!fixed z-5 top-0 left-0 w-full h-[84px] bg-white dark:bg-black dark:border-gray-700">
     <gh-layout 
       align="center"
       justify="between"
@@ -14,16 +14,15 @@
         gap="3"
         custom-class="flex-1 !w-auto"
       >
-        <gh-layout 
-          align="center"
-          justify="end"
-          gap="2"
-          custom-class="flex-1 flex items-center mr-4"
+        <!-- <div 
+          class="flex flex-row items-center justify-end gap-6 mr-4"
         >
-          <gh-text>MENU 1</gh-text>
-          <gh-text>MENU 2</gh-text>
-          <gh-text>MENU 3</gh-text>
-        </gh-layout>
+          <gh-text size="md" weight="medium">Home</gh-text>
+          <gh-text size="md" weight="medium">Feature</gh-text>
+          <gh-text size="md" weight="medium">Pricing</gh-text>
+          <gh-text size="md" weight="medium">Service</gh-text>
+          <gh-text size="md" weight="medium">About</gh-text>
+        </div> -->
         <gh-layout 
           align="center"
           justify="end"
@@ -44,7 +43,7 @@
             :ui="{ rounded: 'rounded-full', padding: { xl: 'px-6 py-2.5' } }"
             @click="toRegister"
           >
-            Create an Account
+            Get Started
           </u-button>
         </gh-layout>
       </gh-layout>

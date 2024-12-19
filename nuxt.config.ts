@@ -24,7 +24,10 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'light'
   },
-  css: [ '~/assets/scss/main.scss' ],
+  css: [ 
+    '@/assets/css/tailwind.css',
+    '@/assets/scss/main.scss' 
+  ],
   vue: {
     propsDestructure: true
   },

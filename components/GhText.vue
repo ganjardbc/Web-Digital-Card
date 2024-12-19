@@ -10,7 +10,7 @@ import { defineProps, computed } from 'vue';
 const props = defineProps({
   size: {
     type: String,
-    default: 'sm'
+    default: ''
   },
   weight: {
     type: String,
@@ -56,7 +56,40 @@ const props = defineProps({
 });
 
 const customClass = computed(() => {
-  return `text-${props.size} font-${props.weight} text-${props.color} dark:text-${props.darkColor} text-${props.align} ${props.letterSpacing} ${props.lineHeight} ${props.textTransform} ${props.textDecoration} ${props.customClass}`;
+  let classes = ''
+
+  if (props.size) {
+    classes += `text-${props.size} `
+  }
+  if (props.weight) {
+    classes += `font-${props.weight} `
+  }
+  if (props.color) {
+    classes += `text-${props.color} `
+  }
+  if (props.darkColor) {
+    classes += `dark:text-${props.darkColor} `
+  }
+  if (props.align) {
+    classes += `text-${props.align} `
+  }
+  if (props.letterSpacing) {
+    classes += `tracking-${props.letterSpacing} `
+  }
+  if (props.lineHeight) {
+    classes += `leading-${props.lineHeight} `
+  }
+  if (props.textTransform) {
+    classes += `${props.textTransform} `
+  }
+  if (props.textDecoration) {
+    classes += `${props.textDecoration} `
+  }
+  if (props.customClass) {
+    classes += `${props.customClass} `
+  }
+
+  return classes
 });
 </script>
 
